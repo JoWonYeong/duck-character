@@ -1,0 +1,137 @@
+.body {
+  position: relative;
+  width: 293px;
+  height: 378px;
+  border-radius: 146px 146px 60px 60px;
+  background-color: #f9f9f9;
+}
+
+.body > * {
+  position: absolute;
+}
+.hair {
+  left: 75.5px;
+  width: 142px;
+  height: 64px;
+  border-radius: 43px 40px 7px 7px;
+  background-color: #1c1c1c;
+}
+
+[class^='eye'] {
+  top: 110px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #2f2f2f;
+}
+
+.eye1 {
+  left: 92.5px;
+}
+
+.eye2 {
+  right: 92.5px;
+}
+
+[class^='mouth'] {
+  left: 67.5px;
+  width: 158px;
+  height: 22px;
+  background-color: #e9e24e;
+}
+
+.mouth1 {
+  top: 140px;
+  border-bottom: 2px solid #7d7a30;
+  border-radius: 26.5px 26.5px 0 0;
+}
+.mouth2 {
+  top: 162px;
+  border-top: 2px solid #7d7a30;
+  border-radius: 0 0 26.5px 26.5px;
+  animation-name: mouth-move;
+  animation-duration: 1.2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+[class^='hand'] {
+  top: 203px;
+  width: 120px;
+  height: 64px;
+  background-color: #f9f9f9;
+}
+
+.hand1 {
+  left: -64px;
+  border-radius: 19px 0px 0px 32px;
+}
+
+.hand2 {
+  right: -64px;
+  border-radius: 0 19px 32px 0;
+  animation-name: hand-shake;
+  animation-duration: 0.6s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+[class^='foot'] {
+  width: 61px;
+  height: 70px;
+  bottom: -70px;
+  transform-origin: top;
+}
+
+.foot1 {
+  left: 53px;
+}
+
+.foot2 {
+  right: 53px;
+}
+
+[class^='foot'] span:nth-child(1) {
+  display: block;
+  margin: auto;
+  width: 28px;
+  height: 45px;
+  background-color: #ffac5f;
+}
+
+[class^='foot'] span:nth-child(2) {
+  display: block;
+  width: 61px;
+  height: 25px;
+  background-color: #ffac5f;
+}
+
+@keyframes hand-shake {
+  0% {
+  }
+  100% {
+    top: 162px;
+    height: 57px;
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes mouth-move {
+  0% {
+  }
+  30% {
+    top: 188px;
+  }
+  50% {
+    top: 162px;
+  }
+  80% {
+    top: 178px;
+  }
+  100% {
+    top: 162px;
+  }
+}

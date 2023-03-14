@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.back {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  bottom: 0;
+  border-radius: 100% 100% 0 0;
+  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+.body {
+  margin: auto;
+  z-index: 100;
+  bottom: -50%;
+  transform: translateY(-50%);
+
+  animation-name: body-move;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+[class^='foot'] {
+  animation-name: foot-move;
+  animation-duration: 0.3s;
+  animation-delay: 0s;
+  animation-iteration-count: 10;
+  animation-timing-function: linear;
+}
+
+.foot1 {
+  animation-direction: alternate;
+}
+
+.foot2 {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes body-move {
+  0% {
+    bottom: -50vh;
+    z-index: -100;
+  }
+  40% {
+    bottom: calc(448px - 60vh);
+    transform: translateY(0);
+  }
+  100% {
+    z-index: 100;
+    bottom: -50%;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes foot-move {
+  0% {
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
